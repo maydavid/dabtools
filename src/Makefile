@@ -25,10 +25,10 @@ wf_maths.o: wf_maths.c
 	$(CC) $(CFLAGS) -c -o wf_maths.o wf_maths.c
 
 dab2eti: $(OBJS) dab2eti.o
-	$(CC) $(LDFLAGS) -o dab2eti dab2eti.o $(OBJS)
+	$(CC) -o dab2eti dab2eti.o $(OBJS) $(LDFLAGS)
 
 sdr2eti: $(OBJS) sdr2eti.o
-	$(CC) $(LDFLAGS) -o sdr2eti sdr2eti.o $(OBJS)
+	$(CC) -o sdr2eti sdr2eti.o $(OBJS) $(LDFLAGS)
 
 clean:
 	rm -f dab2eti dab2eti.o sdr2eti sdr2eti.o eti2mpa eti2mpa.o $(OBJS) *~
